@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:wght@900&family=Manrope:wght@500;700&display=swap');
+
+.main-banner {
+
+    background-image: url('bannerposgrado.jpg');
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    padding: 2rem 1rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .main-banner {
+
+        background-image: url('bannerposgrado.jpg');
+        background-size: cover;
+        /* background-position: center; */
+        background-repeat: no-repeat;
+        padding: 0rem 1rem 0;
+
+
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .grid-contenedor {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1230px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .contenido {
+        /* padding: 73px 38px 68px 0px; */
+        padding: 84px 101px 96px 0px;
+    }
+}
+
+
+.titulo {
+    /* font-family: 'Libre Franklin', sans-serif; */
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    font-family: fuente_3;
+    font-size: 1.9rem;
+    color: rgb(244, 164, 15);
+    letter-spacing: 1px;
+    /* word-spacing: 0.25em; */
+
+}
+
+.subtitulo {
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    font-family: fuente_3;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.descripciones {
+    /* font-family: 'Manrope', sans-serif; */
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #fff;
+
+}
+
+
+.linea-2 {
+    color: rgb(244, 164, 15);
+}
+
+.d-center {
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .d-center {
+        text-align: left;
+    }
+}
+
+.slider3 {
+    margin-top: 0%;
+}
+
+@media screen and (min-width: 1024px) {
+.slider3 {
+    margin-top: 15%;
+    }
+}
+
+
+.s-center {
+    text-align: center;
+    font-family: 'fuente_3';
+    font-size: 2.3rem;
+    color: white;
+    font-weight: 700;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .s-center {
+        text-align: left;
+        font-family: 'fuente_3';
+        font-size: 3.3rem;
+        color: white;
+        font-weight: 700;
+
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .titulo {
+        font-size: 3.3rem;
+        font-weight: 900;
+        color: rgb(255, 255, 255);
+    }
+
+    .subtitulo {
+        font-size: 1.5rem;
+    }
+
+    .descripciones {
+        font-size: 1.2rem;
+    }
+
+}

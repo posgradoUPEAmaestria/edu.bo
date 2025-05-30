@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+@keyframes load-progress {
+    100% {
+        margin-left: -80px;
+        margin-top: -80px;
+        border-width: 80px;
+        opacity: 0;
+    }
+}
+
+@keyframes anm-BL-19-move {
+    0% {
+        top: 0;
+        transform: scale(1, 1);
+    }
+
+    35% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        top: 40px;
+        transform: scale(1.2, 0.8);
+    }
+
+    75% {
+        transform: scale(0.8, 1.2);
+    }
+
+    100% {
+        top: 0;
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes anm-BL-19-shadow {
+    0% {
+        transform: scale(0.5, 0.5);
+        opacity: 0.1;
+    }
+
+    50% {
+        transform: scale(1, 1);
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: scale(0.5, 0.5);
+        opacity: 0.1;
+    }
+}
+
+#loading {
+    display: flex;
+    width: 0;
+    height: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 0px solid #005BA6;
+    -webkit-animation: load-progress 1.2s infinite;
+    animation: load-progress 1.2s infinite;
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 0.6s;
+    opacity: 0.6;
+}
+
+#loading2 {
+    width: 40px;
+    bottom: 2px;
+    height: 5px;
+    background: rgb(0, 0, 0);
+    opacity: 0.9;
+    position: absolute;
+    border-radius: 50%;
+    animation: anm-BL-19-shadow 0.9s ease-out infinite;
+}
+
+#loading-text {
+    width: 200px;
+    height: 150px;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+    position: absolute;
+    display: table;
+}
+
+#loading-text p {
+    font-family: Tahoma, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: #888;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#jet {
+    border-radius: 50%;
+    animation: anm-BL-19-move 1.2s ease-out infinite;
+    position: relative;
+    width: 150px;
+    height: 100px;
+    z-index: 9;
+    opacity: 0.9;
+    /* animation: jet 2s linear infinite;   esto era dela rotacionrebore */
+}
+
+
+/* .loader-ball-19::after {
+content: "sss";
+width: 40px;
+bottom: 2px;
+height: 5px;
+background: rgb(0, 0, 0);
+opacity: 0.;
+position: absolute;
+left: 0;
+border-radius: 50%;
+animation: anm-BL-19-shadow 0.8s ease-out infinite;
+} */
+
+
+/* body {
+    font-family: Raleway, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #888;
+    overflow-x: hidden;
+    font-size: 14px;
+} */
+
+#sky {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    margin-top: 500px;
+    /*border: solid 1px #FFFFFF;*/
+    position: relative;
+}
+
+#gordito {
+    width: 104px;
+    height: 96px;
+    z-index: 11;
+    position: fixed;
+    background-image: url("../imagenes/GORDITO2.png");
+    animation: anim_mov 7s linear 0s forwards 1, anim_desvanecido 0s steps(5, end) 15s forwards 1;
+}
+
+@keyframes anim_mov {
+    from {
+        bottom: 0px;
+        right: 0px;
+    }
+
+    to {
+        bottom: 150px;
+        right: 300px;
+    }
+}
+
+@keyframes anim_mov765 {
+    from {
+        bottom: 0px;
+        right: 0px;
+    }
+
+    to {
+        bottom: 150px;
+        right: 10%;
+    }
+}
+
+@media screen and (max-width:576px) {
+    #gordito {
+        animation: anim_mov765 7s linear 0s forwards 1, anim_desvanecido 0s steps(5, end) 15s forwards 1;
+    }
+
+    #dialogo {
+        right: 50px !important;
+        max-width: 260px;
+        height: 150px;
+    }
+}
+
+@keyframes anim_desvanecido {
+    from {
+        background-position: 0px -95px;
+    }
+
+    to {
+        background-position: -300px -95px;
+        opacity: 0;
+    }
+}
+
+#dialogo {
+    position: fixed;
+    z-index: 10;
+    bottom: 148px;
+    right: 330px;
+    width: 349px;
+    height: 150px;
+    animation: anim_display 1s linear 7s backwards, anim_hide 1s linear 15s forwards;
+}
+
+.mensaje {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: #004996;
+    /* opacity: 0.5; */
+    /* filter: blur(1px); */
+    padding: 10px;
+}
+
+.text-dialogo {
+    /* position: ; */
+    color: white;
+    text-shadow: 0px 0px 2px #999999;
+    animation: anim_display 2s linear 2s;
+    animation-fill-mode: both;
+    text-align: center;
+}
+
+@keyframes anim_display {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes anim_hide {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes anim_portrait {
+    from {
+        background-position: -64px 0px;
+    }
+
+    to {
+        background-position: -192px 0px;
+    }
+}
+
+.cerrar_gordito {
+    color: #fff;
+    font-size: 39px;
+    position: absolute;
+    top: -16px;
+    left: 5px;
+    z-index: 11;
+}
+
+.cerrar_gordito:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.f-navidad {
+    font-family: 'Parisienne', cursive;
+    font-size: 1.5rem;
+}
+
+
+/* REFRESH BUTTON */
+
+
+.w-rp-25 {
+    width: 25%;
+}
+
+@media screen and (max-width: 768px) {
+    .w-rp-25 {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .w-rp-25 {
+        width: 100%;
+    }
+}
